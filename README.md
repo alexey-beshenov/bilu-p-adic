@@ -1,7 +1,9 @@
 # p-adic numbers and Diophantine equations
 
 Université de Bordeaux, Fall 2013, lectures by Yuri Bilu,
-TeXed by Alexey Beshenov. The notes cover three different results:
+TeXed by Alexey Beshenov.
+
+The notes cover three different results:
 
 * Hasse–Minkowski theorem (local-global principle for quadratic forms),
 
