@@ -1,8 +1,8 @@
 all:
 	mpost lattice.mp
 	mpost blichfeld.mp
-	pdflatex bilu
-	pdflatex bilu
+	pdflatex bilu-p-adic
+	pdflatex bilu-p-adic
 
 clean:
 	rm -f *.aux *.log *.out *.toc *.mps *.mpx *~
