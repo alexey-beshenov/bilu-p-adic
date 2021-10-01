@@ -34,7 +34,6 @@
 \newcommand{\HH}{\mathbb{H}}
 \newcommand{\NN}{\mathbb{N}}
 \newcommand{\QQ}{\mathbb{Q}}
-\renewcommand{\O}{\mathcal{O}}
 
 \DeclareMathOperator{\fchar}{char}
 \DeclareMathOperator{\GL}{GL}
@@ -1126,19 +1125,19 @@ generalization.
 Actually Hensel's lemma is valid for any complete nonarchimedian field. Suppose
 $K$ is complete with respect to a nonarchimedian absolute value
 $|\cdot|$. Consider its \term{ring of integers}
-$$\O_K \dfn \{ x \in K \,\mid\, |x| \le 1 \}.$$
+$$\mathcal{O}_K \dfn \{ x \in K \,\mid\, |x| \le 1 \}.$$
 
 \begin{theorem}[General Hensel]
-  Suppose $f (X) \in \O_K [X]$ is a polynomial, and $\alpha_0 \in \O_K$ is such
+  Suppose $f (X) \in \mathcal{O}_K [X]$ is a polynomial, and $\alpha_0 \in \mathcal{O}_K$ is such
   that $|f (\alpha_0)| < 1$ and $|f^\prime (\alpha_0)| = 1$. Then there exists a
-  unique $\alpha \in \O_K$ such that $f (\alpha) = 0$ and
+  unique $\alpha \in \mathcal{O}_K$ such that $f (\alpha) = 0$ and
   $|\alpha - \alpha_0| < 1$.
 \end{theorem}
 
 \begin{theorem}[General Hensel, strong form]\label{theorem:general-hensel-strong}
-  Suppose $f (X) \in \O_K [X]$ is a polynomial, and $\alpha_0 \in \O_K$ is such
+  Suppose $f (X) \in \mathcal{O}_K [X]$ is a polynomial, and $\alpha_0 \in \mathcal{O}_K$ is such
   that $|f (\alpha_0)| < |f^\prime (\alpha_0)|^2$. Then there exists a unique
-  $\alpha \in \O_K$ such that $f (\alpha) = 0$ and
+  $\alpha \in \mathcal{O}_K$ such that $f (\alpha) = 0$ and
   $|\alpha - \alpha_0| \le \frac{|f(\alpha_0)|}{|f^\prime (\alpha_0)|}$.
 \end{theorem}
 
@@ -1157,7 +1156,7 @@ $$\O_K \dfn \{ x \in K \,\mid\, |x| \le 1 \}.$$
     Chapter 7} and \emph{Atiyah, Macdonald, Introduction to Commutative Algebra,
     Exercises 10.9, 10.10}.
 
-  We are interested only in the case $R = \O_K$, where $K$ is a complete
+  We are interested only in the case $R = \mathcal{O}_K$, where $K$ is a complete
   nonarchimedian field.
 \end{remark}
 
@@ -1229,8 +1228,8 @@ the nonarchimedian case Newton's method always converges.
 \vspace{1em}
 
 \begin{proof}[Proof of the general Hensel (\refref{theorem}{theorem:general-hensel-strong})]
-  We have a polynomial $f (X) \in \O_K [X]$ and $\alpha_0 \in \O_K$ is such that
-  $|f (\alpha_0)| < |f^\prime (\alpha_0)|^2$. We look for $\alpha \in \O_K$ such
+  We have a polynomial $f (X) \in \mathcal{O}_K [X]$ and $\alpha_0 \in \mathcal{O}_K$ is such that
+  $|f (\alpha_0)| < |f^\prime (\alpha_0)|^2$. We look for $\alpha \in \mathcal{O}_K$ such
   that $f (\alpha) = 0$ and
   $|\alpha - \alpha_0| \le \frac{|f(\alpha_0)|}{|f^\prime (\alpha_0)|}$. We will
   show that such $\alpha$ exists and we omit the proof of its uniqueness.
@@ -3305,12 +3304,12 @@ So we will focus on the nonarchimedian complete fields.
   There are two principally different situations.
 
   The ``equal characteristic case'' means that $F_K$ and $K$ have the same
-  characteristic. The basic example is $K = F (\!(T)\!)$, $\O_K = F [\![T]\!]$,
+  characteristic. The basic example is $K = F (\!(T)\!)$, $\mathcal{O}_K = F [\![T]\!]$,
   $F_K = F$.
 
   The ``distinct characteristic case'' means that $F_K$ has characteristic $> 0$
   and $K$ has characteristic $0$. The basic example of this is $K = \QQ_p$,
-  $\O_K = \ZZ_p$, $F_K = \FF_p$.
+  $\mathcal{O}_K = \ZZ_p$, $F_K = \FF_p$.
 \end{example}
 
 We fix the following notation.
@@ -3319,13 +3318,13 @@ We fix the following notation.
 \item $K$ is a nonarchimedian complete field with respect to an absolute value
   $|\cdot|$.
 
-\item $\O_K \dfn \{ \alpha \in K \,\mid\, |\alpha| \le 1 \}$ is the
+\item $\mathcal{O}_K \dfn \{ \alpha \in K \,\mid\, |\alpha| \le 1 \}$ is the
   \term{local ring} of $K$.
 
 \item $I_K \dfn \{ \alpha \in K \,\mid\, |\alpha| < 1 \}$ is the maximal ideal
-  in $\O_K$.
+  in $\mathcal{O}_K$.
 
-\item $F_K \dfn \O_K/I_K$ is the \term{residue field} of $K$.
+\item $F_K \dfn \mathcal{O}_K/I_K$ is the \term{residue field} of $K$.
 
 \item $\Gamma_K \dfn \{ |\alpha| \,\mid\, \alpha \in K^\times \}$ is a
   multiplicative subgroup of $\mathbb{R}_{> 0}$.
@@ -3339,13 +3338,13 @@ multiplicative group to an additive group that normalizes to be $\ZZ$.
 
 Let $K$ be a complete field and let $L/K$ be a finite extension. We have
 \[ \xymatrix{
-    I_L\ar@{^(->}[r] & \O_L\ar@{->>}[r] & F_L \\
-    I_K\ar@{^(->}[r]\ar@{^(->}[u] & \O_K\ar@{->>}[r]\ar@{^(->}[u] & F_K\ar@{^(->}[u]
+    I_L\ar@{^(->}[r] & \mathcal{O}_L\ar@{->>}[r] & F_L \\
+    I_K\ar@{^(->}[r]\ar@{^(->}[u] & \mathcal{O}_K\ar@{->>}[r]\ar@{^(->}[u] & F_K\ar@{^(->}[u]
   } \]
 
-\[ I_K = \O_K \cap I_L. \]
+\[ I_K = \mathcal{O}_K \cap I_L. \]
 
-The image of $\O_K$ under the quotient map $\O_L \to F_L$ is the residue field
+The image of $\mathcal{O}_K$ under the quotient map $\mathcal{O}_L \to F_L$ is the residue field
 $F_K$.
 
 \begin{proposition}
@@ -3354,13 +3353,13 @@ $F_K$.
   \begin{proof}
     Let $\overline{\alpha}_1, \ldots, \overline{\alpha}_n \in F_L$ be linearly
     independent over $F_K$. We claim that the lifts
-    $\alpha_1, \ldots, \alpha_n \in \O_L$ are linearly independent over $K$.
+    $\alpha_1, \ldots, \alpha_n \in \mathcal{O}_L$ are linearly independent over $K$.
 
     Assume $\lambda_1 \alpha_1 + \cdots + \lambda_n \alpha_n = 0$ for some
     $\lambda_1,\ldots,\lambda_n \in K$ and
     $(\lambda_1,\ldots,\lambda_n) \ne (0, \ldots, 0)$. We may assume
     (multiplying the identity by some number) that $|\lambda_i| \le 1$ and for
-    some $i$ we have $|\lambda_i| = 1$. Then $\lambda_i \in \O_L$ and in $F_K$
+    some $i$ we have $|\lambda_i| = 1$. Then $\lambda_i \in \mathcal{O}_L$ and in $F_K$
     holds
     $\overline{\lambda}_1 \overline{\alpha}_1 + \cdots + \overline{\lambda}_n \overline{\alpha}_n = 0$
     for $(\overline{\lambda}_1, \ldots, \overline{\lambda}_n) \ne (0,\ldots,0)$.
@@ -3403,21 +3402,21 @@ For an extension $L/K$ the group $\Gamma_K$ is a subgroup of $\Gamma_L$.
 
 In case of discrete absolute values the group $\Gamma_K$ is discrete. We have
 $\Gamma_K = \left< |\pi_K| \right>$ where $\pi_K$ is the primitive element
-generating the maximal ideal $I_K \subset \O_K$.
+generating the maximal ideal $I_K \subset \mathcal{O}_K$.
 
 \begin{example}
   For $\QQ_p$ we have $\pi = p$. For $F (\!(T)\!)$ we have $\pi = T$.
 \end{example}
 
 Every $\alpha \in K$ can be uniquely written as $\pi^m \eta$ for some unit
-$\eta \in \O_K^\times$. Then we can define a valuation $\nu_\pi (\alpha) \dfn m$
+$\eta \in \mathcal{O}_K^\times$. Then we can define a valuation $\nu_\pi (\alpha) \dfn m$
 and the corresponding absolute value $|\alpha| \dfn |\pi|^{-\nu_\pi
   (\alpha)}$. This is essentially what we did in \refref{\S}{section:Zp-intro}
 for $p$-adic integers; the same works for an arbitrary discrete valuation ring.
 
 The ramification index is $e_{L/K} = [|\pi_L|\,\ZZ : |\pi_K|\,\ZZ]$. We have
 $|\pi_L|^\ell = |\pi_K|$ and $\pi_K = \pi_L^\ell \eta$ for
-$\eta \in \O_L^\times$.
+$\eta \in \mathcal{O}_L^\times$.
 
 \vspace{1em}
 
@@ -3435,8 +3434,8 @@ perfect field).
 \begin{proof}
   Let $\alpha_1, \ldots, \alpha_e$ be such that $|\alpha_1|, \ldots, |\alpha_e|$
   represent all residue classes of $\Gamma_L / \Gamma_K$. Let
-  $\overline{\beta}_1, \ldots, \overline{\beta}_f \in \O_L/I_L$ be a basis of
-  $F_L/F_K$ and $\beta_1, \ldots, \beta_f$ are some lifts to $\O_L$.
+  $\overline{\beta}_1, \ldots, \overline{\beta}_f \in \mathcal{O}_L/I_L$ be a basis of
+  $F_L/F_K$ and $\beta_1, \ldots, \beta_f$ are some lifts to $\mathcal{O}_L$.
 
   We have $e f$ elements $\alpha_i \beta_j$ and we claim they are linearly
   independent over $K$. Assume it is not the case and
@@ -3449,7 +3448,7 @@ perfect field).
   among all. Consider all other indices giving the same value:
   $$S \dfn \{ (i,j) \,\mid\, |\lambda_{ij} \, \alpha_i \, \beta_j| = \delta \}.$$
 
-  Now since $\beta_j \in \O_L^\times$, we have $|\beta_j| = 1$, and for all
+  Now since $\beta_j \in \mathcal{O}_L^\times$, we have $|\beta_j| = 1$, and for all
   $(i,j) \in S$ the values $|\lambda_{ij} \, \alpha_i|$ are equal. In
   particular, they belong to the same class $\Gamma_L/\Gamma_K$, meaning that
   all $i$'s are the same.
@@ -3484,71 +3483,71 @@ finitely generated modules over a PID. For the infinite version see
 \emph{Lang, Algebra}, Appendix 2, \S 2, p. 880.)
 
 \begin{lemma}
-  Let $L/K$ be an extension of discrete complete local fields. Then $\O_L$ is a
-  free $\O_K$-module of rank $[L:K]$.
+  Let $L/K$ be an extension of discrete complete local fields. Then $\mathcal{O}_L$ is a
+  free $\mathcal{O}_K$-module of rank $[L:K]$.
 
   \begin{proof}
-    Since $|\cdot|$ is discrete, every ideal of $\O_K$ is generated by $\pi_K^m$
-    for $m = 0, 1, 2, \ldots$ In particular, $\O_K$ is a principal ideal domain,
+    Since $|\cdot|$ is discrete, every ideal of $\mathcal{O}_K$ is generated by $\pi_K^m$
+    for $m = 0, 1, 2, \ldots$ In particular, $\mathcal{O}_K$ is a principal ideal domain,
     and we are going to use this fact.
 
     Let $\alpha_1, \ldots, \alpha_n$ be a $K$-basis of $L$. We may assume that
-    these elements lie in $\O_L$. Consider the $\O_K$-module
-    \[ M \dfn \O_K \alpha_1 \oplus \cdots \oplus \O_K \alpha_n. \]
+    these elements lie in $\mathcal{O}_L$. Consider the $\mathcal{O}_K$-module
+    \[ M \dfn \mathcal{O}_K \alpha_1 \oplus \cdots \oplus \mathcal{O}_K \alpha_n. \]
 
-    It is an $\O_K$-submodule of $\O_L$.
+    It is an $\mathcal{O}_K$-submodule of $\mathcal{O}_L$.
 
     For an element
-    $\alpha = \lambda_1 \, \alpha_1 + \cdots + \lambda_n \, \alpha_n \in \O_L$
+    $\alpha = \lambda_1 \, \alpha_1 + \cdots + \lambda_n \, \alpha_n \in \mathcal{O}_L$
     the coefficients $\lambda_i \in K$ are given by the linear system of
     equations
     \[ \tr_{L/K} (\alpha_i\,\alpha) = \sum_j \tr_{L/K} (\alpha_i\,\alpha_j)\,\lambda_j. \]
 
-    Now $\tr_{L/K} (\alpha_i\,\alpha) \in \O_L\cap K = \O_K$, so
-    $d\,\lambda_j \in \O_K$, where
-    $d = \det [\tr_{L/K} (\alpha_i\,\alpha_j)] \in \O_K$ is the determinant of
+    Now $\tr_{L/K} (\alpha_i\,\alpha) \in \mathcal{O}_L\cap K = \mathcal{O}_K$, so
+    $d\,\lambda_j \in \mathcal{O}_K$, where
+    $d = \det [\tr_{L/K} (\alpha_i\,\alpha_j)] \in \mathcal{O}_K$ is the determinant of
     the linear system.
 
-    We have $d\,\O_L \subseteq M$. Now $M$ is a free $\O_K$-module, and so
-    $d\,\O_L$ (since $\O_K$ is a principal ideal domain!) and $\O_L$. We must
-    conclude that $\O_L = M$ is a free $\O_K$-module of rank $n = [L : K]$.
+    We have $d\,\mathcal{O}_L \subseteq M$. Now $M$ is a free $\mathcal{O}_K$-module, and so
+    $d\,\mathcal{O}_L$ (since $\mathcal{O}_K$ is a principal ideal domain!) and $\mathcal{O}_L$. We must
+    conclude that $\mathcal{O}_L = M$ is a free $\mathcal{O}_K$-module of rank $n = [L : K]$.
   \end{proof}
 \end{lemma}
 
 \begin{remark}
-  Observe that we used above just that $\O_K$ is a principal ideal domain.
-  If $K$ and $L$ are number fields, then $\O_L$ is also a free $\O_K$-module of
-  rank $[L:K]$, but $\O_K$ may not be a PID.
+  Observe that we used above just that $\mathcal{O}_K$ is a principal ideal domain.
+  If $K$ and $L$ are number fields, then $\mathcal{O}_L$ is also a free $\mathcal{O}_K$-module of
+  rank $[L:K]$, but $\mathcal{O}_K$ may not be a PID.
 \end{remark}
 
 \begin{lemma}
-  $\O_L / \pi_K \O_L$ is a $[L:K]$-dimensional vector space over $F_K$.
+  $\mathcal{O}_L / \pi_K \mathcal{O}_L$ is a $[L:K]$-dimensional vector space over $F_K$.
 
   \begin{proof}
-    We have an isomorphism of $\O_K$-modules $\O_L \isom \O_K^n$, hence
-    $\O_L/\pi_K \O_L \isom (\O_K/\pi_K \O_K)^n \isom F_K^n$.
+    We have an isomorphism of $\mathcal{O}_K$-modules $\mathcal{O}_L \isom \mathcal{O}_K^n$, hence
+    $\mathcal{O}_L/\pi_K \mathcal{O}_L \isom (\mathcal{O}_K/\pi_K \mathcal{O}_K)^n \isom F_K^n$.
   \end{proof}
 \end{lemma}
 
-$F_L \dfn \O_L / I_L$ is an $f_{L/K}$-dimensional $F_K$-vector space by the
+$F_L \dfn \mathcal{O}_L / I_L$ is an $f_{L/K}$-dimensional $F_K$-vector space by the
 definition of the residue field degree $f_{L/K}$. Moreover, the following is
 true.
 
 \begin{lemma}
   For each $m$ the quotient
-  $I_L^m / I_L^{m+1} = \pi_L^m \O_L / \pi_L^{m+1} \O_L$ is an
+  $I_L^m / I_L^{m+1} = \pi_L^m \mathcal{O}_L / \pi_L^{m+1} \mathcal{O}_L$ is an
   $f_{L/K}$-dimensional $F_K$-vector space isomorphic to $F_L$.
 
   \begin{proof}
-    Consider a homomorphism of $\O_K$-modules
+    Consider a homomorphism of $\mathcal{O}_K$-modules
 
     \begin{align*}
-      \O_L & \to \frac{\pi_L^m \O_L}{\pi_L^{m+1} \O_L},\\
+      \mathcal{O}_L & \to \frac{\pi_L^m \mathcal{O}_L}{\pi_L^{m+1} \mathcal{O}_L},\\
       x & \mapsto \pi_L^m \cdot x.
     \end{align*}
 
-    This is a surjection and the kernel is $\pi_L \O_L$, hence the isomorphism
-    \[ F_L \dfn \frac{\O_L}{\pi_L \O_L} \isom \frac{\pi_L^m \O_L}{\pi_L^{m+1} \O_L}. \qedhere \]
+    This is a surjection and the kernel is $\pi_L \mathcal{O}_L$, hence the isomorphism
+    \[ F_L \dfn \frac{\mathcal{O}_L}{\pi_L \mathcal{O}_L} \isom \frac{\pi_L^m \mathcal{O}_L}{\pi_L^{m+1} \mathcal{O}_L}. \qedhere \]
   \end{proof}
 \end{lemma}
 
@@ -3562,51 +3561,51 @@ true.
   $e_{L/K}\cdot f_{L/K} = [L:K]$.
 
   \begin{proof}
-    $\O_L / \pi_K \O_L \isom F_K^n$ where $n \dfn [L:K]$, as an $F_K$-vector
+    $\mathcal{O}_L / \pi_K \mathcal{O}_L \isom F_K^n$ where $n \dfn [L:K]$, as an $F_K$-vector
     space.
 
     We have $\pi_L^e \equiv \pi_K$ by definition of $e = e_{L/K}$. Consider a
     filtration
-    \[ \pi_K \O_L = \pi_L^e \O_L \subseteq \pi_L^{e-1} \O_L \subseteq \cdots \subseteq \pi_L \O_L \subseteq \O_L. \]
-    Each quotient $\pi_L^m \O_L / \pi_L^{m+1} \O_L$ is an $f$-dimensional
+    \[ \pi_K \mathcal{O}_L = \pi_L^e \mathcal{O}_L \subseteq \pi_L^{e-1} \mathcal{O}_L \subseteq \cdots \subseteq \pi_L \mathcal{O}_L \subseteq \mathcal{O}_L. \]
+    Each quotient $\pi_L^m \mathcal{O}_L / \pi_L^{m+1} \mathcal{O}_L$ is an $f$-dimensional
     $F_K$-vector space, so we have a tower of such vector spaces
-    \[ \O_L / \pi_K \O_L \ge \O_L / \pi_L^{e-1} \O_L \ge \cdots \ge \O_L / \pi_L \O_L \ge \{ 0 \}. \]
+    \[ \mathcal{O}_L / \pi_K \mathcal{O}_L \ge \mathcal{O}_L / \pi_L^{e-1} \mathcal{O}_L \ge \cdots \ge \mathcal{O}_L / \pi_L \mathcal{O}_L \ge \{ 0 \}. \]
     There are $e$ vector spaces in this tower, and on each step the dimension
     increases by $f$, so
-    \[ \dim_{F_K} \O_L / \pi_K \O_L = e\,f. \qedhere \]
+    \[ \dim_{F_K} \mathcal{O}_L / \pi_K \mathcal{O}_L = e\,f. \qedhere \]
   \end{proof}
 \end{theorem}
 
 Moreover, from the proof we see that if
 $\overline{\theta}_1, \ldots, \overline{\theta}_f$ is a basis of $F_L/F_K$, then
-for some lifts $\theta_1, \ldots, \theta_f$ to $\O_L$, a basis of $\O_L$ as an
-$\O_K$-module is
+for some lifts $\theta_1, \ldots, \theta_f$ to $\mathcal{O}_L$, a basis of $\mathcal{O}_L$ as an
+$\mathcal{O}_K$-module is
 \[ \theta_i \, \pi_L^j, \quad 1 \le i \le f_{L/K}, ~ 0 \le j \le e_{L/K}-1. \]
 
 \begin{remark}\label{remark:local-degrees-global-degree-number-fields}
-  For local fields there is only one prime $\pi_K \in \O_K$ and one prime
-  $\pi_L \in \O_L$, so that the factorization into prime ideals in $\O_L$ comes
+  For local fields there is only one prime $\pi_K \in \mathcal{O}_K$ and one prime
+  $\pi_L \in \mathcal{O}_L$, so that the factorization into prime ideals in $\mathcal{O}_L$ comes
   down to
-  \[ \pi_K \O_L = \left<\pi_L^e\right>. \]
+  \[ \pi_K \mathcal{O}_L = \left<\pi_L^e\right>. \]
 
   But for example, if $L$ and $K$ are number fields, then there are many prime
-  ideals $\mathfrak{p} \subset \O_K$, and for each one we can consider the
+  ideals $\mathfrak{p} \subset \mathcal{O}_K$, and for each one we can consider the
   unique factorization
-  \[ \tag{*} \mathfrak{p}\,\O_L = \mathfrak{P}_1^{e_1} \cdots \mathfrak{P}_s^{e_s} \]
-  into prime ideals $\mathfrak{P}_i \subset \O_L$. We define for each
+  \[ \tag{*} \mathfrak{p}\,\mathcal{O}_L = \mathfrak{P}_1^{e_1} \cdots \mathfrak{P}_s^{e_s} \]
+  into prime ideals $\mathfrak{P}_i \subset \mathcal{O}_L$. We define for each
   $\mathfrak{P}_i$ the residue field degree to be
-  $f_i \dfn [\O_L / \mathfrak{P}_i : \O_K / \mathfrak{p}]$.
+  $f_i \dfn [\mathcal{O}_L / \mathfrak{P}_i : \mathcal{O}_K / \mathfrak{p}]$.
 
   Recall that the \term{norm} $N (\mathfrak{a})$ of an ideal
-  $\mathfrak{a} \subseteq \O_L$ is defined to be the ideal
-  $N (\mathfrak{a}) \subseteq \O_K$ generated by $N_{K/L} (x)$ for all
+  $\mathfrak{a} \subseteq \mathcal{O}_L$ is defined to be the ideal
+  $N (\mathfrak{a}) \subseteq \mathcal{O}_K$ generated by $N_{K/L} (x)$ for all
   $x \in \mathfrak{a}$.
 
   \begin{itemize}
-  \item For a prime ideal $\mathfrak{P}_i \subset \O_L$ one has
+  \item For a prime ideal $\mathfrak{P}_i \subset \mathcal{O}_L$ one has
     $N (\mathfrak{P}_i) = \mathfrak{p}^{f_i}$, where
-    $\mathfrak{p} = \O_K\cap\mathfrak{P}_i$ and
-    $f_i \dfn [\O_L/\mathfrak{P}_i : \O_K/\mathfrak{p}]$ as above.
+    $\mathfrak{p} = \mathcal{O}_K\cap\mathfrak{P}_i$ and
+    $f_i \dfn [\mathcal{O}_L/\mathfrak{P}_i : \mathcal{O}_K/\mathfrak{p}]$ as above.
 
   \item The norm is multiplicative:
     $N (\mathfrak{A}\,\mathfrak{B}) = N (\mathfrak{A}) \cdot N (\mathfrak{B})$.
@@ -3650,14 +3649,14 @@ $[L:K] = e_{L/K}\cdot f_{L/K}$.
     Since $F_L/F_K$ is separable, we have $F_L = F_K (\overline{\theta})$ for
     some $\overline{\theta} \in F_L$. Let $\overline{p} (T) \in F_K [T]$ be the
     minimal (monic) polynomial of $\overline{\theta}$ over $F_K$. Let
-    $p (T) \in \O_K [T]$ be a monic lifting of $\overline{p}$. The degree of $p$
+    $p (T) \in \mathcal{O}_K [T]$ be a monic lifting of $\overline{p}$. The degree of $p$
     is $f_{L/K}$, and it is irreducible over $K$.
 
-    Let $\theta_0 \in \O_L$ be a lifting of $\overline{\theta} \in F_L$. We have
+    Let $\theta_0 \in \mathcal{O}_L$ be a lifting of $\overline{\theta} \in F_L$. We have
     $p (\theta_0) \equiv 0 \pmod{I_L}$ and
     $p^\prime (\theta_0) \not\equiv 0 \pmod{I_L}$ (because $\overline{p}$ is
     separable, $\overline{p}^\prime (\theta) \ne 0$). Now apply Hensel's
-    lemma that says that there exists $\theta \in \O_L$ such that
+    lemma that says that there exists $\theta \in \mathcal{O}_L$ such that
     $p (\theta) = 0$ and $\theta \equiv \overline{\theta} \pmod{I_L}$.
 
     Take $L_0 \dfn K (\theta)$. We have $F_{L_0} = F_L$ and so
@@ -3677,13 +3676,13 @@ characterization of unramified extensions, assuming $F_K$ is a perfect field.
   finite unramified extensions $L/K$.
 
   \[ \xymatrix{
-      \O_K\ar@{^(->}[r]\ar[d] & \O_L\ar[d] \\
+      \mathcal{O}_K\ar@{^(->}[r]\ar[d] & \mathcal{O}_L\ar[d] \\
       F_K\ar@{^(->}[r] & F_L
     } \]
 
   \begin{proof}
     Assume we have an unramified extension $L / K$. Then we have
-    $F_L \dfn \O_L / (\pi_K)$ and $F_K \dfn \O_K / (\pi_K)$ and an extension
+    $F_L \dfn \mathcal{O}_L / (\pi_K)$ and $F_K \dfn \mathcal{O}_K / (\pi_K)$ and an extension
     $F_L / F_K$.
 
     \vspace{1em}
@@ -3692,9 +3691,9 @@ characterization of unramified extensions, assuming $F_K$ is a perfect field.
     is perfect by the assumption, $F_L = F_K (\overline{\theta})$ for some
     $\overline{\theta} \in F_L$. Let $\overline{p} (X) \in F_K [X]$ be the
     minimal polynomial of $\overline{\theta}$. Consider a lift
-    $p (X) \in \O_K [X]$. It must be irreducible since $\overline{p}$ is
+    $p (X) \in \mathcal{O}_K [X]$. It must be irreducible since $\overline{p}$ is
     irreducible. By Hensel's lemma, there exist a \emph{unique}
-    $\theta \in \O_L$ such that $p (\theta) = 0$ and
+    $\theta \in \mathcal{O}_L$ such that $p (\theta) = 0$ and
     $\theta \equiv \overline{\theta} \pmod{\pi_K}$. Now take
     $L \dfn K (\theta)$. We have
     $[L : K] = \deg p = \deg \overline{p} = [F_L : F_K]$, so $L/K$ is
@@ -3714,7 +3713,7 @@ characterization of unramified extensions, assuming $F_K$ is a perfect field.
   $\Gal (L_n / \QQ_p)$ is generated by the Frobenius automorphism $\phi_n$ which
   induces the usual Frobenius on $\FF_{p^n} / \FF_p$:
 
-  \[ \phi_n (x) \equiv x^{p^n} \pmod{p} \quad \text{for all }x \in \O_{L_n}. \qedhere \]
+  \[ \phi_n (x) \equiv x^{p^n} \pmod{p} \quad \text{for all }x \in \mathcal{O}_{L_n}. \qedhere \]
 \end{example}
 
 \begin{example}
@@ -3793,14 +3792,14 @@ characterization of unramified extensions, assuming $F_K$ is a perfect field.
 
   \begin{proof}
     For $\pi_K$ and $\pi_L$ we have $\pi_L^e = \pi_K \, \eta$ for some
-    $\eta \in \O_L^\times$. Since the extension is totally ramified,
-    $F_L = F_K$. So there exists $\theta \in \O_K^\times$ such that
+    $\eta \in \mathcal{O}_L^\times$. Since the extension is totally ramified,
+    $F_L = F_K$. So there exists $\theta \in \mathcal{O}_K^\times$ such that
     $\eta \equiv \theta \pmod{\pi_L}$. Replacing $\pi_K$ with $\pi_K\,\theta$
     and $\eta$ with $\eta\,\theta^{-1}$, we may assume
     $\eta \equiv 1 \pmod{\pi_L}$.
 
     \begin{claim}
-      If $\fchar F_L \nmid m$, then every $\alpha \in \O_L$ satisfying
+      If $\fchar F_L \nmid m$, then every $\alpha \in \mathcal{O}_L$ satisfying
       $\alpha \equiv 1 \pmod{I_L}$ is an $m$-th power.
     \end{claim}
 
@@ -3811,7 +3810,7 @@ characterization of unramified extensions, assuming $F_K$ is a perfect field.
     \vspace{1em}
 
     The claim can be applied since $L/K$ is tame. So $\eta$ is an $e$-th root,
-    $\eta = \epsilon^e$ for some $\epsilon \in \O_L^\times$. Replacing $\pi_L$
+    $\eta = \epsilon^e$ for some $\epsilon \in \mathcal{O}_L^\times$. Replacing $\pi_L$
     with $\pi_L\,\epsilon^{-1}$, we obtain $\pi_L^e = \pi_K$.
   \end{proof}
 \end{proposition}
@@ -3861,8 +3860,8 @@ characterization of unramified extensions, assuming $F_K$ is a perfect field.
   \begin{proof}
     Since $F_L / F_K$ is a finite separable extension, we have
     $F_L = F_K (\overline{\theta})$ for some $\overline{\theta} \in
-    F_L$. Consider its lifting $\theta \in \O_L$ and its minimal polynomial
-    $p (X) \in \O_K [X]$. Reduce this polynomial modulo $\pi_K$: consider
+    F_L$. Consider its lifting $\theta \in \mathcal{O}_L$ and its minimal polynomial
+    $p (X) \in \mathcal{O}_K [X]$. Reduce this polynomial modulo $\pi_K$: consider
     $\overline{p} (X) \dfn p (X) \mod \pi_K \in F_K [X]$. Now we have, under our
     assumption that $[L:K] = [F_L:F_K]$,
 
@@ -3872,7 +3871,7 @@ characterization of unramified extensions, assuming $F_K$ is a perfect field.
     Hence $L = K (\theta)$ and $\overline{p} (X)$ is the minimal polynomial of
     $\overline{\theta}$ over $F_K$. Thus $L K_1 = K_1 (\theta)$.
 
-    Let $q (x) \in \O_{K_1} [X]$ be the minimal polynomial of $\theta$ over
+    Let $q (x) \in \mathcal{O}_{K_1} [X]$ be the minimal polynomial of $\theta$ over
     $K_1$ and let $\overline{q} (X) \dfn q (X) \pmod \pi_K \in F_{K_1}
     [X]$. This reduced modulo $\pi_K$ polynomial $\overline{q} (X)$ is separable
     as a factor of $\overline{p} (X)$, and so it is irreducible over $F_{K_1}$,
@@ -4614,14 +4613,14 @@ respect to $|\cdot|_v$ is a finite extension of $\QQ_p$. We want
 $\log \lambda_i$ to be defined, and for this we need
 $|\lambda_i - 1|_v < \rho_p = p^{-\frac{1}{p-1}}$.
 
-Let $\mathfrak{p}_v$ be the prime ideal of $\O_{K_v}$. Then
+Let $\mathfrak{p}_v$ be the prime ideal of $\mathcal{O}_{K_v}$. Then
 $|\lambda - 1|_v < \rho_p$ is equivalent to
 $\lambda \equiv 1 \pmod{\mathfrak{p}_v^m}$ for some $m \in \ZZ_{\ge 1}$, i.e. to
 the fact that the image of $\lambda$ in the finite ring
-$\O_{K_v} / \mathfrak{p}_v^m$ is $1$. Since $|\lambda|_v = 1$, we have
-$\lambda \in \O_{K_v}^\times$. By the Fermat's little theorem,
+$\mathcal{O}_{K_v} / \mathfrak{p}_v^m$ is $1$. Since $|\lambda|_v = 1$, we have
+$\lambda \in \mathcal{O}_{K_v}^\times$. By the Fermat's little theorem,
 \[ \lambda^N \equiv 1 \pmod{\mathfrak{p}_v^m}, \quad
-  \text{where } N = \# (\O_{K_v} / \mathfrak{p}_v^m)^\times. \]
+  \text{where } N = \# (\mathcal{O}_{K_v} / \mathfrak{p}_v^m)^\times. \]
 
 So $\lambda_1^N, \ldots, \lambda_s^N$ lie in the disk $D (1, \rho_p)$. For each
 number $r \in \{ 0, 1, \ldots, N-1 \}$ we can put
@@ -5517,8 +5516,8 @@ $\QQ$. This means that the coefficients $a_i$ belong to some number field $K$.
 
 \begin{theorem}[Eisenstein]\label{theorem:eisenstein-1}
   Let $x (T) = \sum_{k \ge 0} a_k\,T^k$ be an algebraic power series with
-  $a_i \in K$. Then there exists an integer $c \in \O_K$ such that
-  $c^k \, a_k \in \O_K$.
+  $a_i \in K$. Then there exists an integer $c \in \mathcal{O}_K$ such that
+  $c^k \, a_k \in \mathcal{O}_K$.
 \end{theorem}
 
 This means that the denominators in an algebraic power series must have a very
@@ -5550,7 +5549,7 @@ $|a_k|_v \le (|c|_v^{-1})^k$. So the following holds.
   \refref{theorem}{theorem:eisenstein-1}, recall what are the absolute values on
   a number field. For every $x \in K$ we can look at the \emph{fractional} ideal
   factorization
-  $$x \O_K = \prod_{\substack{\mathfrak{p} \subset \O_K \\ \text{nonzero prime}}} \mathfrak{p}^{\nu_\mathfrak{p} (x)},$$
+  $$x \mathcal{O}_K = \prod_{\substack{\mathfrak{p} \subset \mathcal{O}_K \\ \text{nonzero prime}}} \mathfrak{p}^{\nu_\mathfrak{p} (x)},$$
   and by definition the number $\nu_\mathfrak{p} (x) \in \ZZ$ is the
   \emph{valuation} of $x$ at $\mathfrak{p}$. It defines in turn an absolute
   value $|x|_\mathfrak{p} \dfn \rho^{\nu_\mathfrak{p} (x)}$. Any nonarchimedian
@@ -5560,14 +5559,14 @@ $|a_k|_v \le (|c|_v^{-1})^k$. So the following holds.
   \refref{\S}{section:absolute-values-embeddings}).
 
   Further,
-  \[ \O_{K,\mathfrak{p}} = \{ x\in K \,\mid\, |x|_\mathfrak{p} \le 1 \}, \]
+  \[ \mathcal{O}_{K,\mathfrak{p}} = \{ x\in K \,\mid\, |x|_\mathfrak{p} \le 1 \}, \]
 
-  \[ \O_K = \bigcap_{\substack{\mathfrak{p} \subset \O_K \\ \text{nonzero prime}}} \O_{K,\mathfrak{p}} =
-    \{ x\in K \,\mid\, |x|_\mathfrak{p} \le 1 \text{ for all } \mathfrak{p} \subseteq \O_K \}. \]
+  \[ \mathcal{O}_K = \bigcap_{\substack{\mathfrak{p} \subset \mathcal{O}_K \\ \text{nonzero prime}}} \mathcal{O}_{K,\mathfrak{p}} =
+    \{ x\in K \,\mid\, |x|_\mathfrak{p} \le 1 \text{ for all } \mathfrak{p} \subseteq \mathcal{O}_K \}. \]
 
   Thus, assuming that $|a_k|_v \le 1$ for all but finitely many finite places
   $v\in M_K$ and $|a_k|_v \le A_v^k$ for \emph{finitely many} $v$, we can find
-  $c \in \O_K$ with small enough absolute values with respect to each of these
+  $c \in \mathcal{O}_K$ with small enough absolute values with respect to each of these
   $v$ (take a product of big powers of corresponding primes):
   \[ |c|_v \le \frac{1}{A_v} \quad \text{so that} \quad |c^k \, a_k|_v = |c|_v^k \cdot |a_k|_v \le 1. \]
 \end{remark}
@@ -5597,8 +5596,8 @@ converges, but it contradicts Eisenstein's theorem.
   g_0 (T), \ldots, g_N (T) \in K [T] \]
 \emph{such that}
 \[ \tag{1} F (x(T),T) = g_0 (T) + g_1 (T) \, x (T) + \cdots + g_{N-1} (T) \, x^{N-1} (T) + g_N (T) \, x^N (T) = 0. \]
-\emph{Then there are algebraic integers $u,v \in \O_K$, $u \ne 0$, $v \ne 0$
-  such that $u \, v^n \, a_n \in \O_K$ for all $n$.}
+\emph{Then there are algebraic integers $u,v \in \mathcal{O}_K$, $u \ne 0$, $v \ne 0$
+  such that $u \, v^n \, a_n \in \mathcal{O}_K$ for all $n$.}
 
 \vspace{1em}
 
@@ -5638,11 +5637,11 @@ our choice of $m$ their free terms are
 $$\ell \dfn f_1 (0) \ne 0 \text{ and }f_j (0) = 0 \text{ for } j > 1.$$
 
 After multiplying (4) by certain algebraic integer, we may assume that
-$f, f_1, \ldots, f_N \in \O_K [T]$.
+$f, f_1, \ldots, f_N \in \mathcal{O}_K [T]$.
 
 Observe that by its construction, in the power series
 $v (T) = \sum\limits_{n \ge 1} b_n \, T^n$ (where $b_n = a_{n+m+1}$) the
-constant term is $0$. We want to show that $\ell^n \, b_n \in \O_K$.
+constant term is $0$. We want to show that $\ell^n \, b_n \in \mathcal{O}_K$.
 
 We look at the coefficients of $T^n$ in (4):
 
@@ -5654,8 +5653,8 @@ We look at the coefficients of $T^n$ in (4):
 
 Using the fact that the free term of $f_1 (T)$ is $\ell$ and it is $0$ for
 $f_2 (T), \ldots, f_N (T)$, we can express $\ell\,b_n$ as the sum of terms of
-the type $c \prod\limits_{i < n} b_i^{k_i}$, where $c \in \O_K$. Now
-$\ell^n \, b_n \in \O_K$ follows by induction.
+the type $c \prod\limits_{i < n} b_i^{k_i}$, where $c \in \mathcal{O}_K$. Now
+$\ell^n \, b_n \in \mathcal{O}_K$ follows by induction.
 
 \section{Proof of the Sprind\v{z}uk's theorem}
 
