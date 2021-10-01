@@ -1,4 +1,4 @@
-all:
+all: bilu-p-adic.tex lattice.mp blichfeld.mp
 	mpost lattice.mp
 	mpost blichfeld.mp
 	pdflatex bilu-p-adic
